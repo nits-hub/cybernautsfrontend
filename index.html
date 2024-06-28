@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybernauts Product Registration </title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <!-- Image Section -->
+            <section class="image-container">
+                <img src="assets/images/baleno.jpg" alt="">
+            </section>
+
+            <!-- Form Section -->
+            <section class="form-wrapper">
+
+                <div class="cross-icon">
+                    <button><img src="assets/flaticons/x-mark.png" alt=""></button>
+                </div>
+                
+                
+                <form action="http://localhost:3000/register-product" method="POST" enctype="multipart/form-data" class="form-container">
+                    <h1>Register your product</h1>
+                
+                    <div class="controllers">
+                        <div class="controller">
+                            <label for="category">Category</label>
+                            <select id="category" name="category" required>
+                                <option value="">Select Category</option>
+                                <option value="hatchback">Hatchback</option>
+                                <option value="sedan">Sedan</option>
+                                <option value="suv">SUV</option>
+                                <option value="mpv">MPV</option>
+                            </select>
+                        </div>
+                
+                        <div class="controller">
+                            <label for="model">Model</label>
+                            <select id="model" name="model" required>
+                                <option value="">Select Model</option>
+                                <option value="alto">Alto</option>
+                                <option value="wagonr">WagonR</option>
+                                <option value="swift">Swift</option>
+                                <option value="baleno">Baleno</option>
+                                <option value="dzire">Dzire</option>
+                                <option value="ciaz">Ciaz</option>
+                                <option value="brezza">Brezza</option>
+                                <option value="s_cross">S-Cross</option>
+                                <option value="ertiga">Ertiga</option>
+                                <option value="xl6">XL6</option>
+                            </select>
+                        </div>
+                    </div>
+                
+                    <div class="controllers">
+                        <div class="controller">
+                            <label for="serialNumber">Serial Number<sup class="red">*</sup></label>
+                            <input type="text" id="serialNumber" name="serialNumber" required>
+                        </div>
+                
+                        <div class="controller">
+                            <label for="invoiceDate">Date of Invoice</label>
+                            <input type="date" id="invoiceDate" name="invoiceDate" required>
+                        </div>
+                    </div>
+
+                    <div class="controllers">
+                        <div class="controller">
+                            <label for="fileUpload">Upload File:</label>
+                            <input type="file" id="fileUpload" name="fileUpload" required style="display:none;">
+                            
+                            <div id="dropArea" onclick="document.getElementById('fileUpload').click();">
+                                <p>Drag files here or <span id="browseFiles">browse</span></p>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <button class="submit" type="submit">Register Product</button>
+                </form>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
